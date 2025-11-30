@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  imports: [RouterLink, RouterOutlet]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'project-1';
+  val:number  = 20;
+  ngOnInit(): void {
+    this.changeTitle();
+  }
+  changeTitle() {
+    this.title = 'Title Changed!';
+  }
 }
