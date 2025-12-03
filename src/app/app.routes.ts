@@ -6,7 +6,7 @@ import { Routes } from '@angular/router';
 
 
 export const routes: Routes = [
-    // {path:'home',component: HomeComponent},
+    {path:'',redirectTo:'admin',pathMatch:'full'},
     // {path:'about/:id',component: AboutComponent}
     {path:'home',loadComponent:()=>import('./home/home.component').then(m=>m.HomeComponent)},
     {path:'about/:id',loadComponent:()=>import('./about/about.component').then(m=>m.AboutComponent)},
