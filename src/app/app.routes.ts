@@ -1,12 +1,15 @@
-import { AboutComponent } from './component/about/about.component';
+
 
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
+// import { AboutComponent } from './about/about.component';
+
 
 export const routes: Routes = [
-    {path:'home',component: HomeComponent},
-    {path:'about/:id',component: AboutComponent}
-    // {path:'home',loadComponent:()=>import('./home/home.component').then(m=>m.HomeComponent)},
-    // {path:'about/:id',loadComponent:()=>import('./component/about/about.component').then(m=>m.AboutComponent)}
+    // {path:'home',component: HomeComponent},
+    // {path:'about/:id',component: AboutComponent}
+    {path:'home',loadComponent:()=>import('./home/home.component').then(m=>m.HomeComponent)},
+    {path:'about/:id',loadComponent:()=>import('./about/about.component').then(m=>m.AboutComponent)},
+    {path:'admin',loadComponent:()=>import('./admin/admin.component').then(m=>m.AdminComponent)},
 ];
 

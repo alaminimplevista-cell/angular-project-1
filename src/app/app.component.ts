@@ -8,13 +8,13 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrl: './app.component.scss',
   imports: [RouterLink, RouterOutlet]
 })
-export class AppComponent implements OnInit{
-  title = 'project-1';
-  val:number  = 20;
-  ngOnInit(): void {
-    this.changeTitle();
-  }
-  changeTitle() {
-    this.title = 'Title Changed!';
-  }
+export class AppComponent{
+  // title = 'project-1';
+  // val:number  = 20;
+  // ngOnInit(): void {
+  //   this.changeTitle();
+  // }
+  // changeTitle() {
+  //   this.title = 'Title Changed!';
+  // }
 }
